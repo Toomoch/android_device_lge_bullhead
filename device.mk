@@ -366,6 +366,7 @@ PRODUCT_PACKAGES += \
 endif
 
 PRODUCT_PACKAGES += \
+    keystore.msm8992 \
     gatekeeper.msm8992
 
 # general support
