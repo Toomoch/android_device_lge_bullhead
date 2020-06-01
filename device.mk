@@ -341,7 +341,7 @@ PRODUCT_PACKAGES += \
 # new gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service   
+    android.hardware.gatekeeper@1.0-service
 
 ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
 PRODUCT_PACKAGES += \
@@ -372,9 +372,6 @@ PRODUCT_PACKAGES += \
 # general support
 PRODUCT_PACKAGES += \
     libtinyxml
-
-# GoogleCamera
-$(call inherit-product, packages/apps/GoogleCamera/config.mk)
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
@@ -588,7 +585,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal HAL
 PRODUCT_PACKAGES += \
-    thermal.bullhead 
+    thermal.bullhead
 
 #GNSS HAL
 PRODUCT_PACKAGES += \
@@ -634,7 +631,7 @@ endif
 # OEM Unlock reporting
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1
-	
+
 # Disable rescue party
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true

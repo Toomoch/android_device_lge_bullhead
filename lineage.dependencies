@@ -10,11 +10,5 @@
     "target_path" : "vendor/lge",
     "branch"      : "10",
     "remote"      : "github"
-  },
-  {
-    "repository"  : "lakgarg/packages_apps_GoogleCamera",
-    "target_path" : "packages/apps/GoogleCamera",
-    "branch"      : "master",
-    "remote"      : "github"
   }
 ]

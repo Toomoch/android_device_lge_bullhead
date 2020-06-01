@@ -20,16 +20,16 @@
 # Get the long list of APNs
 PRODUCT_COPY_FILES := device/lge/bullhead/apns-full-conf.xml:system/etc/apns-conf.xml
 
-# Inherit some common PixelExperience stuff.
+# Inherit some common Lineage stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-PRODUCT_NAME := aosp_bullhead
+PRODUCT_NAME := lineage_bullhead
 PRODUCT_DEVICE := bullhead
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 5X
@@ -45,7 +45,7 @@ $(call inherit-product, vendor/lge/bullhead/bullhead-vendor.mk)
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="bullhead-user 8.1.0 OPM3.171019.014 4503998 release-keys"
 
-BUILD_FINGERPRINT=google/bullhead/bullhead:8.1.0/OPM3.171019.014/4503998:user/release-keys 
+BUILD_FINGERPRINT=google/bullhead/bullhead:8.1.0/OPM3.171019.014/4503998:user/release-keys
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=google/bullhead/bullhead:8.1.0/OPM3.171019.014/4503998:user/release-keys
@@ -53,6 +53,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     Launcher3 \
     WallpaperPicker
-
-
-
