@@ -1,14 +1,14 @@
 [
   {
-    "repository"  : "svlog/kernel_lge_bullhead",
+    "repository"  : "Toomoch/kernel_lge_bullhead",
     "target_path" : "kernel/lge/bullhead",
-    "branch"      : "stable",
+    "branch"      : "lineage-17.1",
     "remote"      : "github"
   },
   {
-    "repository"  : "lakgarg/proprietary_vendor_lge",
+    "repository"  : "Toomoch/proprietary_vendor_lge",
     "target_path" : "vendor/lge",
-    "branch"      : "10",
+    "branch"      : "lineage-17.1",
     "remote"      : "github"
   }
 ]
