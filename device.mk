@@ -320,7 +320,8 @@ PRODUCT_PACKAGES += \
     mm-qcamera-app \
     android.hardware.camera.provider@2.4-impl \
     camera.device@1.0-impl \
-    camera.device@3.2-impl
+    camera.device@3.2-impl \
+    Snap
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
@@ -388,7 +389,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep
-    
+
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
    fs_config_files
@@ -398,7 +399,8 @@ PRODUCT_PACKAGES += \
     bullhead_wlan_mac
 
 DEVICE_PACKAGE_OVERLAYS := \
-    device/lge/bullhead/overlay
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
 
 # Enable AAC 5.1 output
 PRODUCT_PROPERTY_OVERRIDES += \
