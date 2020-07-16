@@ -16,8 +16,11 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_bullhead.mk \
+    $(LOCAL_DIR)/lineage_bullhead_blod.mk \
     $(LOCAL_DIR)/aosp_bullhead_svelte.mk
 
 COMMON_LUNCH_CHOICES := \
     lineage_bullhead-userdebug \
-    lineage_bullhead-eng
+    lineage_bullhead-eng \
+    lineage_bullhead_blod-userdebug \
+    lineage_bullhead_blod-eng

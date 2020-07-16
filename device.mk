@@ -33,8 +33,16 @@ WITH_DEXPREOPT_PIC := true
 # Enable support for chinook sensorhub
 TARGET_USES_CHINOOK_SENSORHUB := false
 
+# Select init.bullhead.rc depending on target (blod fix)
+ifeq ($(TARGET_PRODUCT),lineage_bullhead_blod)
 PRODUCT_COPY_FILES += \
-    device/lge/bullhead/init.bullhead.rc:root/init.bullhead.rc \
+    device/lge/bullhead/init.bullhead_blod.rc:root/init.bullhead.rc
+else
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/init.bullhead.rc:root/init.bullhead.rc
+endif
+
+PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.usb.rc:root/init.bullhead.usb.rc \
     device/lge/bullhead/fstab.bullhead:root/fstab.bullhead \
     device/lge/bullhead/ueventd.bullhead.rc:root/ueventd.bullhead.rc \
@@ -160,9 +168,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
-# Power configuration file
+# Power configuration file depending on target (blod fix)
+ifeq ($(TARGET_PRODUCT),lineage_bullhead_blod)
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/init.bullhead_blod.power.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.bullhead.power.sh
+else
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.power.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.bullhead.power.sh
+endif
 
 # MBN
 PRODUCT_COPY_FILES += \
