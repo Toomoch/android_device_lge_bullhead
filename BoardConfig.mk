@@ -205,3 +205,6 @@ TARGET_FLATTEN_APEX := true
 ifeq ($(TARGET_PRODUCT),lineage_bullhead_blod)
 BOARD_KERNEL_CMDLINE += boot_cpus=0-3 maxcpus=4
 endif
+
+# Security Patch Level
+VENDOR_SECURITY_PATCH := 2018-12-05
